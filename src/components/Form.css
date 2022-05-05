@@ -1,0 +1,18 @@
+.Form {
+   display: flex;
+    gap: 10px;
+    
+}
+
+.input-text {
+    width: 300px;
+    font-size: 1.5em;
+}
+
+.input-submit {
+    width: 200px;
+    border: none;
+    background: teal;
+    color: lightcoral;
+    font-size: 1.5em;
+}
