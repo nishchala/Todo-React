@@ -5,8 +5,8 @@ function Form() {
     const [listItem, setListItem] = useState('')
     const [todos,setToDos] = useState([])
    
-    function addItem() {
-
+    function addItem(e) {
+        e.preventDefault()
         setToDos(oldtodos => {
             setListItem('')
             return [...oldtodos,listItem]
@@ -21,18 +21,13 @@ function Form() {
         })
     }
 
-    function checkForEnter(e) {
-        if(e.keyCode === 13) {
-            addItem()
-        }
-    }
 
     return (
         <>
-        <div className='Form'>
-            <input type="text" value={listItem} onChange={e=>setListItem(e.target.value)} className="input-text" onKeyDown={checkForEnter} placeholder='Enter list item'/>
-            <button className="input-submit" onClick={addItem}>Add</button>
-        </div>
+        <form className='Form' onSubmit={addItem}>
+            <input type="text" value={listItem} onChange={e=>setListItem(e.target.value)} className="input-text" placeholder='Enter list item'/>
+            <input type='submit' className="input-submit" value="Add"/>
+        </form>
         <ul className='List'>
             {todos.map((todo,index) => {
                 return (
