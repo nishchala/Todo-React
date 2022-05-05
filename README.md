@@ -1,3 +1,16 @@
+# ToDo List App with React functional components
+
+Html/CSS/Reactjs
+
+Features -
+1. Add item to the list
+2. Display the list items
+3. Delete any item from the list
+4. Update the list after deleting items
+
+<img width="1327" alt="todoApp" src="https://user-images.githubusercontent.com/28265373/166865996-dc4035d8-1814-4759-8b42-12aa600364f2.png">
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
