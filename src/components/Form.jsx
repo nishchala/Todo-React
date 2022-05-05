@@ -8,7 +8,15 @@ function Form() {
     function addItem() {
         setToDos(oldtodos => [...oldtodos,listItem])
     }
-    
+
+    function deleteItem(index) {
+        setToDos(oldtodos => {
+            return (
+                oldtodos.filter((_,i) => i !== index)
+            )
+        })
+    }
+
     return (
         <>
         <div className='Form'>
@@ -16,11 +24,14 @@ function Form() {
             <button className="input-submit" onClick={addItem}>Add</button>
         </div>
         <ul className='List'>
-            {todos.map(todo => {
+            {todos.map((todo,index) => {
                 return (
-                    <li>{todo}</li>
+                    <li key={index}>
+                    {todo}
+                    <button onClick={()=>deleteItem(index)}>Delete</button>
+                    </li>                
                 )
-            })}
+            })}        
         </ul>
         </>
         

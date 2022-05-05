@@ -15,4 +15,30 @@
     background: teal;
     color: lightcoral;
     font-size: 1.5em;
+    cursor: pointer;
+}
+
+.List {
+    list-style: none;
+    width: 520px;
+}
+
+
+
+li {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid teal;
+    background: lightblue;
+    display: flex;
+    justify-content: space-between;
+}
+
+li button {
+    border: none;
+    background: teal;
+    color: lightcoral;
+    padding: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
 }
